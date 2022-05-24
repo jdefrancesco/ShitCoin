@@ -48,8 +48,6 @@ var ShitBlockChain []ShitBlock
 
 // shitHashOut "eats" a ShitBlock and creates a hash of it so to speak.
 func shitHashOut(sb ShitBlock) string {
-	// rec := string(sb.Index) + sb.Timestamp + string(sb.ShitsTaken) + sb.PrevHash
-
 	rec := fmt.Sprint(sb.Index) + sb.Timestamp + fmt.Sprint(sb.ShitsTaken) + sb.PrevHash
 	h := sha256.New()
 	h.Write([]byte(rec))
